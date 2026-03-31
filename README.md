@@ -103,7 +103,6 @@ POST /auth/login
   "password": "12345678"
 }
 ```
-
 ### Response
 
 * Sets **httpOnly cookies**:
@@ -112,6 +111,38 @@ POST /auth/login
   * `refreshToken`
 
 ---
+
+## ➤ Get Current User Info
+
+🔒 Requires Authentication (httpOnly cookies)
+
+```
+
+GET /user/info
+
+````
+
+### Response
+
+```json
+{
+  "data": {
+    "id": "user_id",
+    "name": "Darshan",
+    "email": "darshan@gmail.com",
+    "role": {
+      "name": "Admin",
+      "permissions": [
+        {
+          "name": "Create User",
+          "code": "create_user"
+        }
+      ]
+    }
+  }
+}
+````
+
 
 # 🔑 Step 3: Permission Management
 

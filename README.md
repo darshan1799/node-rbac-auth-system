@@ -288,7 +288,60 @@ PATCH /users/:id/role
 7. Access Protected APIs
 ```
 
+---
+## ⚙️ Installation & Setup
+
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/darshan1799/node-rbac-auth-system
+cd node-rbac-auth-system
+````
+
+---
+
+## 2️⃣ Install Dependencies
+
+```bash
+npm install
 ```
 
 ---
+
+## 3️⃣ Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+```env
+
+JWT_KEY=your_jwt_secret
+REFRESH_KEY=your_refresh_secret
+
+MONGO_URL_ATLAS=your_mongodb_connection_string
+
+FRONTEND_ORIGIN=http://localhost:3000
+
+SUPER_ADMIN_SECRET=your_super_admin_secret
+```
+
+---
+
+## 4️⃣ Run the Server
+
+
+```bash
+node index.js
+```
+
+---
+
+## 🌐 Server Running At
+
+```bash
+http://localhost:2000/api
+```
+---
+
+
 

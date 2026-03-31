@@ -99,8 +99,8 @@ POST /auth/login
 
 ```json
 {
-  "email": "admin@gmail.com",
-  "password": "123456"
+  "email": "darshan@gmail.com",
+  "password": "12345678"
 }
 ```
 
@@ -289,8 +289,8 @@ PATCH /users/:id/role
 ```
 
 ---
-## ⚙️ Installation & Setup
 
+# ⚙️ Installation & Setup
 
 ## 1️⃣ Clone the Repository
 

@@ -1,8 +1,8 @@
 const express = require("express");
+const connectDB = require("./db/connect");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 require("dotenv").config();
-require("./db/connect");
 const authRoute = require("./routes/authRoutes");
 const userRoute = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
@@ -21,6 +21,7 @@ app.use(
   }),
 );
 
+connectDB();
 app.use(express.json());
 app.use("/api", authRoute);
 app.use("/api/user", userRoute);

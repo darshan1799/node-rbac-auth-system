@@ -10,6 +10,7 @@ const superAdmin = require("./routes/superAdmin");
 const permissionRoute = require("./routes/permissionRoutes");
 const roleRoute = require("./routes/roleRoutes");
 const assignRoleRoute = require("./routes/assignRoleRoute");
+const userActionRoute = require("./routes/userActionRoute");
 
 const app = express();
 app.use(cookieParser());
@@ -29,6 +30,7 @@ app.use("/api", superAdmin);
 app.use("/api", permissionRoute);
 app.use("/api", roleRoute);
 app.use("/api", assignRoleRoute);
+app.use("/api", userActionRoute);
 
 app.listen(2000, () => {
   console.log("app started on 2000");

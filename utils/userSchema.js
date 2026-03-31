@@ -6,4 +6,9 @@ const userSchemaZ = z.object({
   role: z.string().optional(),
 });
 
-module.exports = { userSchemaZ };
+const updateUserSchema = z.object({
+  name: z.string().min(1).optional(),
+  email: z.string().email().optional(),
+});
+
+module.exports = { userSchemaZ, updateUserSchema };

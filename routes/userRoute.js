@@ -9,7 +9,17 @@ routes.get("/info", auth, async (req, res) => {
     const user = req?.user;
     const userInfo = await userModel
       .findOne({ _id: user.user_id })
-      .select("-password");
+      .populate({
+        path: "role",
+        select: "name",
+        populate: {
+          path: "permissions",
+          select: "name code",
+        },
+      })
+      .select("-password")
+      .lean();
+
     return res.status(200).json({ user: userInfo });
   } catch (err) {
     return res

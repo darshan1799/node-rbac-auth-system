@@ -33,6 +33,14 @@ app.use("/api", roleRoute);
 app.use("/api", assignRoleRoute);
 app.use("/api", userActionRoute);
 
+app.get("/api", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to Node RBAC Authentication API 🚀",
+    description: "Role-Based Access Control system with JWT authentication",
+    github: "https://github.com/darshan1799/node-rbac-auth-system",
+  });
+});
+
 app.listen(2000, () => {
   console.log("app started on 2000");
 });
